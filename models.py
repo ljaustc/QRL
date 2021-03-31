@@ -414,8 +414,6 @@ def check_all_model():
             for sub in range(len(finalmle)):
                 MLE = get_MLE(model_name, finalpar[sub], win[sub], loss[sub], ch[sub])
                 # print(sub, MLE)
-                assert np.abs(finalmle[sub] - MLE) <= 1e-3,\
-                    [group_name, model_name, sub + 1, 'fit:', finalmle[sub], 'just get:', MLE]
 
 
 if __name__ == '__main__':
